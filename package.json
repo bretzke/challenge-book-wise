@@ -2,7 +2,6 @@
   "name": "book-wise",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,19 +9,22 @@
     "lint": "next lint"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.0.0",
     "@stitches/react": "^1.2.8",
     "next": "13.4.12",
+    "next-seo": "^6.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.4.5",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
+    "@types/uuid": "^9.0.2",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "ts-node": "^10.9.1",
