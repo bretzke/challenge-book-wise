@@ -12,6 +12,7 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.10",
     "@prisma/client": "^5.0.0",
     "@stitches/react": "^1.2.8",
     "next": "13.4.12",

@@ -14,11 +14,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   let redirectUser: boolean | Redirect = false;
 
   if (session) {
-    // REDIRECIONAR
-    // redirectUser = {
-    //   destination: "/path",
-    //   permanent: true,
-    // };
+    redirectUser = {
+      destination: "/books",
+      permanent: true,
+    };
   }
 
   return {

@@ -9,12 +9,14 @@ import Image from "next/image";
 import { signIn } from "next-auth/react";
 import homeWallpaper from "../../assets/home-wallpaper.png";
 import LoginButton from "@/components/ButtonLogin";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <NextSeo
-        title="Website | Home"
+        title="Home | Book Wise"
         description="Lorem ipsum dolor sit amet"
       />
       <HomeContainer>
@@ -43,7 +45,7 @@ export default function Home() {
               />
               <LoginButton
                 type="guest"
-                handleOnClick={() => console.log("entrar como visitante")}
+                handleOnClick={async () => router.push("/books")}
               />
             </ButtonsContainer>
           </div>
