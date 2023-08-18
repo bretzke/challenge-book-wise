@@ -1,7 +1,7 @@
 import logoSVG from "@/assets/logo.svg";
 import Image from "next/image";
 import { SidebarContainer, SidebarContainerItems } from "./styles";
-import { Binoculars, ChartLineUp } from "@phosphor-icons/react";
+import { Binoculars, ChartLineUp, User } from "@phosphor-icons/react";
 import SidebarItem from "./components/SidebarItem";
 import { useSession } from "next-auth/react";
 
@@ -33,6 +33,12 @@ export default function Sidebar() {
             <Binoculars size={24} weight="regular" />
             Explorar
           </SidebarItem>
+          {session.status === "authenticated" && (
+            <SidebarItem path="/profile">
+              <User size={24} weight="regular" />
+              Perfil
+            </SidebarItem>
+          )}
         </SidebarContainerItems>
       </div>
 

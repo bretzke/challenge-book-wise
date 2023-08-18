@@ -8,7 +8,7 @@ export const SidebarContainer = styled("aside", {
   alignItems: "center",
 
   height: "100vh",
-  maxWidth: 232,
+  width: 232,
 
   paddingTop: "$10",
   paddingBottom: "$6",
