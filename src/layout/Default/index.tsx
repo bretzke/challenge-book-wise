@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { DefaultLayoutContainer } from "./styles";
+import { DefaultLayoutContainer, LayoutWithPadding } from "./styles";
 import Sidebar from "@/components/Sidebar";
 
 interface DefaultLayoutProps {
@@ -9,8 +9,10 @@ interface DefaultLayoutProps {
 export default function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
     <DefaultLayoutContainer>
-      <Sidebar />
-      {children}
+      <LayoutWithPadding>
+        <Sidebar />
+        {children}
+      </LayoutWithPadding>
     </DefaultLayoutContainer>
   );
 }
