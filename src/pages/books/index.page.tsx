@@ -1,5 +1,6 @@
 import DefaultLayout from "@/layout/Default";
 import { NextSeo } from "next-seo";
+import BooksRated from "./components/BooksRated";
 
 export default function Books() {
   return (
@@ -8,7 +9,9 @@ export default function Books() {
         title="Livros | BookWise"
         description="Página inicial | Book Wise"
       />
-      <DefaultLayout>Books</DefaultLayout>
+      <DefaultLayout>
+        <BooksRated />
+      </DefaultLayout>
     </>
   );
 }
